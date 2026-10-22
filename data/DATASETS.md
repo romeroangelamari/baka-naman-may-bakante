@@ -5,15 +5,14 @@
 - **license**: The SCUT-HEAD database is free to the academic community for research purpose usage only.
 - **version**: 2018-1-16 
 - **download**: 2026-10-18
-- **format**: .xml in annotations folder & jpeg
-
+- **format**: .xml 
 
 **CEPDOF** 
 - [DATASET](https://vip.bu.edu/projects/vsns/cossy/datasets/cepdof/)
 - **license**: You may use this dataset for non-commercial purposes. 
 - **version**: 2020-6-?
 - **download**: 2026-10-18
-- **format**: .json in annotations folder & jpeg
+- **format**: .json 
 
 
 **FRIDA** 
@@ -53,7 +52,7 @@
 - **license**: CC BY 4.0  
 - **version**: 2026-4-14
 - **download**: 2026-10-18
-- **format**: .csv & jpg
+- **format**: .txt
 
 
 **RHC** 
