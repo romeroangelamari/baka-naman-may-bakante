@@ -84,8 +84,10 @@ if __name__ == "__main__":
         rows.append({"dataset": "rhc", "sequence": "rhc",
                      "frame": stem(cp) + ".jpg", "gt_count": count_density_csv(cp)})
 
-    # AIRC (.mp4): no labels yet. After Step 10, export the Roboflow labels to
-    # data/raw/airc_labeled/ and uncomment these lines:
+    # AIRC (.json): Roboflow COCO export of the frames labelled in Step 10
+    for jp in glob.glob(f"{RAW}/airc_labeled/**/*.json", recursive=True):
+        rows += count_coco_style(jp, "airc", "airc")
+
     # for tp in glob.glob(f"{RAW}/airc_labeled/**/*.txt", recursive=True):
     #     rows.append({"dataset": "airc", "sequence": "airc",
     #                  "frame": stem(tp) + ".jpg", "gt_count": count_yolo_txt(tp, 0)})
