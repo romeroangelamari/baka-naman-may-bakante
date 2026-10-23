@@ -3,3 +3,8 @@ data/raw/
 models/
 *.engine
 .env
+data/yolo_cepdof/
+data/yolo_cepdof_small/
+*.zip
+results/label_checks/
+runs/
