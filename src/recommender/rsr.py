@@ -5,7 +5,8 @@ import pandas as pd
 from data import load_campus
 from recommend import recommend, empty_reservations
 
-N_REQUESTS, SEED, TIE = 500, 42, 0.05
+N_REQUESTS, SEED, TIE = 500, 42, 0.05                      # TIE = what counts as a correct answer
+RANK_TIE = float(sys.argv[1]) if len(sys.argv) > 1 else 0.05  # tie tolerance used for ranking
 ACTIVITIES = ["individual", "group", "online class"]
 
 spaces, fc, occ = load_campus()
@@ -63,7 +64,7 @@ for i in range(N_REQUESTS):
                      ("lgbm_det_plain", dict(src="det", cautious=False)),
                      ("lgbm_true_cautious", dict(src="true", cautious=True))]:
         top = recommend(spaces, fc, empty_reservations(), as_of, start, end, activity, quiet, outlets,
-                        tie=TIE, k=3, **kw)
+                        tie=RANK_TIE, k=3, **kw)
         top = [] if top.empty else top[top["space_id"].isin(truth)]["space_id"].tolist()
         picks[name] = top
     picks["static_least_used"] = sorted(truth, key=lambda sp: train_avg[sp])[:3]
@@ -78,14 +79,14 @@ for i in range(N_REQUESTS):
                      "top1_actual_peak": truth[top[0]] if top else np.nan})
 
 res = pd.DataFrame(rows)
-res.to_csv("results/rsr_requests.csv", index=False)
+res.to_csv(f"results/rsr_requests_tie{RANK_TIE}.csv", index=False)
 summary = res.groupby("policy").agg(requests=("request", "nunique"),
                                     RSR_top1=("top1_correct", "mean"), top3_hit=("top3_hit", "mean"),
                                     had_space=("top1_had_space", "mean"),
                                     avg_actual_peak=("top1_actual_peak", "mean"))
 summary[["RSR_top1", "top3_hit", "had_space"]] *= 100
 summary = summary.sort_values("RSR_top1", ascending=False).round(1)
-summary.to_csv("results/rsr_summary.csv")
+summary.to_csv(f"results/rsr_summary_tie{RANK_TIE}.csv")
 by_lead = res.pivot_table(index="lead_min", columns="policy", values="top1_correct", aggfunc="mean") * 100
 
 pd.set_option("display.width", 250); pd.set_option("display.max_columns", 20)
