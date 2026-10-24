@@ -1,0 +1,4 @@
+model,threshold
+yolo26n.pt,0.25
+yolo26s.pt,0.4
+yolov8s.pt,0.35

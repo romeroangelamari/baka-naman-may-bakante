@@ -12,7 +12,7 @@ RAW = "data/raw"
 LIBRARY_SEATS_PERSON = 0
 # FRIDA images are assumed to be named <image_id>.jpg, e.g. 0001155.jpg.
 # If FRIDA's image files are named differently, change this pattern.
-FRIDA_FRAME_NAME = "{image_id}.jpg"
+FRIDA_FRAME_NAME = "{sequence}/{image_id}.jpg"
 # ---------------------------------------------------------------------------
 
 def name(path):
@@ -43,7 +43,7 @@ def count_frida(json_path, sequence):
         boxes = json.load(f)
     per_image = collections.Counter(b["image_id"] for b in boxes)
     return [{"dataset": "frida", "sequence": sequence,
-             "frame": FRIDA_FRAME_NAME.format(image_id=img), "gt_count": n}
+             "frame": FRIDA_FRAME_NAME.format(sequence=sequence, image_id=img), "gt_count": n}
             for img, n in sorted(per_image.items())]
 
 def count_yolo_txt(txt_path, person_class=0):

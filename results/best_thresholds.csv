@@ -1,4 +1,7 @@
 model,threshold
+models/yolo11s_cepdof/weights/best.pt,0.45
+models/yolo26s_cepdof/weights/best.pt,0.45
+models/yolov8s_cepdof/weights/best.pt,0.5
 yolo11n.pt,0.15
 yolo11s.pt,0.3
 yolo26n.pt,0.15
