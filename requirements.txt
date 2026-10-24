@@ -13,3 +13,4 @@ locust
 python-dotenv
 pymysql
 sqlalchemy
+scikit-learn

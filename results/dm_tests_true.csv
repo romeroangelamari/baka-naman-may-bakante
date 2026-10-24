@@ -1,0 +1,55 @@
+source,space_id,horizon,vs,n,MAE_lightgbm,MAE_other,DM_stat,p_value,result
+true,S1,15min,persistence,336,0.77,0.76,0.78,0.4358,no significant difference
+true,S1,15min,prophet,336,0.77,1.62,-11.81,0.0,LightGBM better
+true,S1,15min,train_profile,336,0.77,1.74,-12.68,0.0,LightGBM better
+true,S2,15min,persistence,240,0.0,0.0,2.39,0.0176,LightGBM worse
+true,S2,15min,prophet,240,0.0,4.15,-23.54,0.0,LightGBM better
+true,S2,15min,train_profile,240,0.0,4.2,-13.15,0.0,LightGBM better
+true,S3,15min,persistence,240,2.06,2.08,-0.66,0.5112,no significant difference
+true,S3,15min,prophet,240,2.06,4.7,-6.42,0.0,LightGBM better
+true,S3,15min,train_profile,240,2.06,4.7,-6.39,0.0,LightGBM better
+true,S4,15min,persistence,288,1.47,1.41,1.14,0.2542,no significant difference
+true,S4,15min,prophet,288,1.47,11.91,-15.21,0.0,LightGBM better
+true,S4,15min,train_profile,288,1.47,11.91,-15.25,0.0,LightGBM better
+true,S5,15min,persistence,288,0.8,0.78,1.56,0.1204,no significant difference
+true,S5,15min,prophet,288,0.8,3.4,-12.83,0.0,LightGBM better
+true,S5,15min,train_profile,288,0.8,3.4,-12.77,0.0,LightGBM better
+true,S6,15min,persistence,288,0.82,0.81,0.42,0.6784,no significant difference
+true,S6,15min,prophet,288,0.82,3.31,-12.09,0.0,LightGBM better
+true,S6,15min,train_profile,288,0.82,3.29,-12.01,0.0,LightGBM better
+true,S1,30min,persistence,336,1.03,1.18,-3.27,0.0012,LightGBM better
+true,S1,30min,prophet,336,1.03,1.62,-6.46,0.0,LightGBM better
+true,S1,30min,train_profile,336,1.03,1.74,-7.13,0.0,LightGBM better
+true,S2,30min,persistence,240,0.02,0.0,3.69,0.0003,LightGBM worse
+true,S2,30min,prophet,240,0.02,4.15,-13.75,0.0,LightGBM better
+true,S2,30min,train_profile,240,0.02,4.2,-7.76,0.0,LightGBM better
+true,S3,30min,persistence,240,3.57,3.91,-1.81,0.0713,no significant difference
+true,S3,30min,prophet,240,3.57,4.7,-2.51,0.0126,LightGBM better
+true,S3,30min,train_profile,240,3.57,4.7,-2.5,0.0132,LightGBM better
+true,S4,30min,persistence,288,2.32,2.32,-0.01,0.9891,no significant difference
+true,S4,30min,prophet,288,2.32,11.91,-8.87,0.0,LightGBM better
+true,S4,30min,train_profile,288,2.32,11.91,-8.8,0.0,LightGBM better
+true,S5,30min,persistence,288,1.17,1.24,-1.3,0.1949,no significant difference
+true,S5,30min,prophet,288,1.17,3.4,-6.61,0.0,LightGBM better
+true,S5,30min,train_profile,288,1.17,3.4,-6.57,0.0,LightGBM better
+true,S6,30min,persistence,288,1.29,1.38,-1.76,0.079,no significant difference
+true,S6,30min,prophet,288,1.29,3.31,-6.21,0.0,LightGBM better
+true,S6,30min,train_profile,288,1.29,3.29,-6.13,0.0,LightGBM better
+true,S1,60min,persistence,336,1.25,1.75,-5.19,0.0,LightGBM better
+true,S1,60min,prophet,336,1.25,1.62,-3.29,0.0011,LightGBM better
+true,S1,60min,train_profile,336,1.25,1.74,-3.92,0.0001,LightGBM better
+true,S2,60min,persistence,240,0.12,0.0,2.76,0.0061,LightGBM worse
+true,S2,60min,prophet,240,0.12,4.15,-9.29,0.0,LightGBM better
+true,S2,60min,train_profile,240,0.12,4.2,-5.36,0.0,LightGBM better
+true,S3,60min,persistence,240,5.01,6.74,-3.74,0.0002,LightGBM better
+true,S3,60min,prophet,240,5.01,4.7,0.73,0.4647,no significant difference
+true,S3,60min,train_profile,240,5.01,4.7,0.69,0.4912,no significant difference
+true,S4,60min,persistence,288,3.78,3.72,0.08,0.9325,no significant difference
+true,S4,60min,prophet,288,3.78,11.91,-5.62,0.0,LightGBM better
+true,S4,60min,train_profile,288,3.78,11.91,-5.61,0.0,LightGBM better
+true,S5,60min,persistence,288,1.59,1.95,-2.38,0.0181,LightGBM better
+true,S5,60min,prophet,288,1.59,3.4,-3.55,0.0005,LightGBM better
+true,S5,60min,train_profile,288,1.59,3.4,-3.54,0.0005,LightGBM better
+true,S6,60min,persistence,288,1.8,2.16,-2.71,0.0072,LightGBM better
+true,S6,60min,prophet,288,1.8,3.31,-3.33,0.001,LightGBM better
+true,S6,60min,train_profile,288,1.8,3.29,-3.3,0.0011,LightGBM better

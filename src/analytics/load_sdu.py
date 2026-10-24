@@ -17,7 +17,8 @@ for room, space in ROOM_TO_SPACE.items():
     d = pd.read_csv(f)
 
     # SDU gives DayId instead of dates -> place days on consecutive weekdays
-    day_ids = sorted(d["DayId"].unique())
+    day_ids = (d.groupby("DayId")[["Year", "Month"]].first()
+             .sort_values(["Year", "Month"], kind="stable").index.tolist())
     dates = pd.bdate_range(START, periods=len(day_ids))
     day_to_date = dict(zip(day_ids, dates))
     d["ts"] = d["DayId"].map(day_to_date) + pd.to_timedelta(d["Time"])
