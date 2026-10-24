@@ -7,4 +7,4 @@ data/yolo_cepdof/
 data/yolo_cepdof_small/
 *.zip
 results/label_checks/
-runs/
+runs/results/e2e_forecasts/
