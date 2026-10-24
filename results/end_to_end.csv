@@ -1,0 +1,10 @@
+scenario,count_MAE,forecast_MAE_15min,forecast_MAE_30min,forecast_MAE_60min,RSR_top1,requests_scored,top1_agreement,top3_agreement,forecast_MAE_increase_30min
+perfect,0.0,0.98,1.54,2.21,68.59,382,100.0,100.0,0.0
+calibrated_camera,0.81,1.31,1.75,2.27,71.99,382,83.52,96.31,0.21
+yolo26s_finetuned,2.86,1.91,2.24,2.55,75.13,382,77.2,95.18,0.7
+yolo26s,2.23,1.68,2.05,2.53,69.9,382,81.26,96.46,0.51
+yolov8s,2.74,1.8,2.15,2.46,70.68,382,80.36,95.56,0.61
+yolo26n (selected),2.18,1.71,2.12,2.49,68.32,382,83.75,96.31,0.58
+yolo26n x2 errors,3.34,2.41,2.64,2.84,70.16,382,76.3,94.51,1.1
+yolo26n x3 errors,3.88,2.9,2.96,3.13,75.13,382,63.88,91.65,1.42
+yolo26n x4 errors,4.14,3.28,3.35,3.49,74.08,382,56.88,90.29,1.81
