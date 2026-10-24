@@ -10,3 +10,6 @@ streamlit
 plotly          
 pytest          
 locust          
+python-dotenv
+pymysql
+sqlalchemy

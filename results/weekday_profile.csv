@@ -1,0 +1,16 @@
+weekday,mean_pct_8am_8pm,space_id,name
+0,27.83564814814815,S1,Library
+1,29.854166666666668,S1,Library
+2,27.5625,S1,Library
+3,26.319444444444443,S1,Library
+4,26.689814814814813,S1,Library
+0,10.114583333333334,S2,Large lecture room
+1,15.850694444444445,S2,Large lecture room
+2,5.512152777777778,S2,Large lecture room
+3,2.795138888888889,S2,Large lecture room
+4,0.8333333333333334,S2,Large lecture room
+0,8.506944444444445,S3,Small lecture room
+1,14.930555555555555,S3,Small lecture room
+2,7.320601851851851,S3,Small lecture room
+3,9.186921296296298,S3,Small lecture room
+4,6.958912037037036,S3,Small lecture room

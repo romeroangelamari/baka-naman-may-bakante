@@ -1,0 +1,4 @@
+space,room,days,intervals,missing,duplicates,negatives,over_capacity_clipped,max_before_clip,mean
+S4,room_1,44,4224,0,0,0,0,78.0,8.23
+S5,room_2,44,4224,0,0,0,11,57.0,4.09
+S6,room_3,44,4224,0,0,0,34,69.0,3.68

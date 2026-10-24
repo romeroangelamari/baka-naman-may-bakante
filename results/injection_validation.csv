@@ -1,0 +1,5 @@
+resolution,source,n,MAE,bias,within_2,p10,p90,KS_D,KS_p_median
+raw readings,real fisheye camera,50338,1.558,0.213,0.812,-2.0,2.0,,
+raw readings,injected (mean of 20 runs),50338,5.703,-5.518,0.666,-20.9,0.0,0.353,0.0
+15-min medians,real fisheye camera,288,1.271,-0.073,0.816,-3.0,1.0,,
+15-min medians,injected (mean of 20 runs),288,6.605,-6.416,0.625,-23.17,0.0,0.284,0.0

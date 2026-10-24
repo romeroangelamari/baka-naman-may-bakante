@@ -1,0 +1,4 @@
+level,intervals,real_MAE,injected_MAE,real_bias,injected_bias
+0-5,178,0.43,0.39,0.38,-0.22
+6-15,23,1.63,4.57,1.54,-4.39
+16+,87,2.9,20.78,-1.43,-20.62
