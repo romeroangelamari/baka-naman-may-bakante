@@ -1,0 +1,5 @@
+A,B,A right only,B right only,p_value,significant
+lgbm_det_cautious,random,110,48,0.0,True
+lgbm_det_cautious,static_least_used,105,30,0.0,True
+lgbm_det_plain,lgbm_det_cautious,22,4,0.0005,True
+lgbm_true_cautious,lgbm_det_cautious,4,11,0.1185,False

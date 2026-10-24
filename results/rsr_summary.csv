@@ -1,0 +1,6 @@
+policy,requests,RSR_top1,top3_hit,had_space,avg_actual_peak
+lgbm_det_plain,377,77.2,98.7,100.0,0.2
+lgbm_det_cautious,377,72.4,98.1,100.0,0.2
+lgbm_true_cautious,377,70.6,98.1,100.0,0.2
+random,377,56.0,94.7,100.0,0.2
+static_least_used,377,52.5,100.0,100.0,0.3

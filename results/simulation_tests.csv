@@ -1,0 +1,13 @@
+students,A,B,A_overflow_%,B_overflow_%,runs_different,runs,p_value,significant
+25,soft_cautious,greedy_cautious,0.0,0.27,3,90,0.1088,False
+25,soft_plain,greedy_plain,0.0,0.27,3,90,0.1088,False
+25,soft_cautious,soft_plain,0.0,0.0,0,90,1.0,False
+50,soft_cautious,greedy_cautious,0.18,4.07,35,90,0.0,True
+50,soft_plain,greedy_plain,0.44,3.2,29,90,0.0002,True
+50,soft_cautious,soft_plain,0.18,0.44,9,90,0.0071,True
+100,soft_cautious,greedy_cautious,6.6,25.88,90,90,0.0,True
+100,soft_plain,greedy_plain,6.77,22.48,90,90,0.0,True
+100,soft_cautious,soft_plain,6.6,6.77,28,90,0.083,False
+200,soft_cautious,greedy_cautious,25.27,55.8,90,90,0.0,True
+200,soft_plain,greedy_plain,26.01,52.42,90,90,0.0,True
+200,soft_cautious,soft_plain,25.27,26.01,44,90,0.0,True

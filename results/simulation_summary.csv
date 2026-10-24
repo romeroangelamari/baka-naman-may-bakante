@@ -1,0 +1,17 @@
+students,policy,overflow_rate,peak_load,gini,rooms_used
+25,greedy_cautious,0.27,0.77,0.44,2.0
+25,greedy_plain,0.27,0.75,0.44,2.0
+25,soft_cautious,0.0,0.72,0.4,4.04
+25,soft_plain,0.0,0.72,0.39,4.6
+50,greedy_cautious,4.07,1.0,0.44,2.0
+50,greedy_plain,3.2,0.93,0.44,2.0
+50,soft_cautious,0.18,0.81,0.33,4.81
+50,soft_plain,0.44,0.82,0.32,5.3
+100,greedy_cautious,25.88,1.82,0.51,2.0
+100,greedy_plain,22.48,1.69,0.51,2.0
+100,soft_cautious,6.6,1.16,0.3,5.57
+100,soft_plain,6.77,1.16,0.3,5.82
+200,greedy_cautious,55.8,3.51,0.58,2.0
+200,greedy_plain,52.42,3.23,0.58,2.0
+200,soft_cautious,25.27,1.97,0.28,5.96
+200,soft_plain,26.01,1.96,0.28,5.98
