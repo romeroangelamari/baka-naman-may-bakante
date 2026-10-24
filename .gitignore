@@ -8,3 +8,5 @@ data/yolo_cepdof_small/
 *.zip
 results/label_checks/
 runs/results/e2e_forecasts/
+.streamlit/secrets.toml
+.streamlit/secrets.toml

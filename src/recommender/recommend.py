@@ -74,7 +74,12 @@ def recommend(spaces, forecasts, reservations, as_of, start, end, activity="indi
     # 3. Rank: lowest worst moment (within the tie tolerance), then lowest average, then preferences
     df["PPOR_band"] = np.floor(df["PPOR"] / tie)
     df = df.sort_values(["PPOR_band", "APOR", "pref_score"], ascending=[True, True, False]).head(k)
-    df["reason"] = df.apply(lambda x: f"expected at most {x.PPOR:.0%} full "
-                                      f"(about {x.expected_peak:.0f} of {x.capacity} people) "
-                                      f"between {start:%I:%M %p} and {end:%I:%M %p}", axis=1)
+    t0, t1 = f"{start:%I:%M %p}".lstrip("0"), f"{end:%I:%M %p}".lstrip("0")   # 5:30 PM, not 05:30 PM
+
+    def reason(x):
+        people = int(np.ceil(round(x.PPOR * x.capacity, 6)))      # whole people, rounded up
+        return (f"expected at most {people / x.capacity:.0%} full "
+                f"(up to {people} of {x.capacity} people) between {t0} and {t1}")
+
+    df["reason"] = df.apply(reason, axis=1)
     return df.drop(columns=["PPOR_band"]).reset_index(drop=True)
