@@ -35,6 +35,8 @@ def recommend(spaces, forecasts, reservations, as_of, start, end, activity="indi
     as_of, start, end = pd.Timestamp(as_of), pd.Timestamp(start), pd.Timestamp(end)
     if start < as_of:
         start = as_of
+    if end <= start:
+        return pd.DataFrame()                               # nothing to plan
     slots = pd.date_range(start.ceil("15min"), end, freq="15min", inclusive="left")
     if len(slots) == 0:
         return pd.DataFrame()
