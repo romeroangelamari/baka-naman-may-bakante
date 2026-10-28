@@ -16,6 +16,7 @@ services:
     build: .
     environment:
       DB_URL: mysql+pymysql://root:${DB_PASSWORD}@db:3306/bakante
+      STREAMLIT_BROWSER_GATHER_USAGE_STATS: "false"
     volumes:
       - ./.streamlit/secrets.toml:/app/.streamlit/secrets.toml:ro
     ports:

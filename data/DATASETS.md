@@ -31,7 +31,7 @@
 - **format**: .csv
 
 
-**SMART BUILDING** 
+**SDU** 
 - [DATASET](https://pmc.ncbi.nlm.nih.gov/articles/PMC6879639/)
 - **license**: The dataset can be used for developing and evaluating data-driven applications, occupant sensing, and building analytics. This dataset can be an impetus for the researchers and designers to conduct experiments and pilot studies, hence used for benchmarking. 
 - **version**: 

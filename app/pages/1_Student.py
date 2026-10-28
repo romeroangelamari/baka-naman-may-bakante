@@ -87,22 +87,35 @@ with st.form("request"):
     submitted = st.form_submit_button("Recommend rooms", type="primary")
 
 if submitted:
+    start = pd.Timestamp(start)
     end = start + pd.Timedelta(hours=hours)
-    res = db.get_reservations()
+    t0, t1 = f"{start:%I:%M %p}".lstrip("0"), f"{end:%I:%M %p}".lstrip("0")
+    res = db.get_reservations()                     # soft reservations of all users (MySQL)
     top = db.recommend(spaces, fc, res, as_of, start, end, activity, want_quiet, want_outlets, k=3)
+
     if top.empty:
         st.error("No room matches this request with forecast data. Try another time or fewer filters.")
     else:
-        st.success(f"Best rooms for {start:%I:%M %p} to {end:%I:%M %p}:")
+        # True when even the best room is expected to be full at its busiest moment
+        all_full = bool((top["PPOR"] >= 1.0).all())
+        if all_full:
+            st.warning(f"Every suitable room is expected to be full between {t0} and {t1}. "
+                       "These are the least crowded options, but a different time is recommended.")
+        else:
+            st.success(f"Best rooms for {t0} to {t1}:")
+
+        has_outlets = spaces.set_index("space_id")["outlets"]
         for rank, r in top.iterrows():
             lab, _ = db.level(r["PPOR"])
-            extra = []
-            if want_outlets and spaces.set_index("space_id").loc[r["space_id"], "outlets"]:
-                extra.append("has outlets")
+            extra = ["has outlets"] if want_outlets and has_outlets.loc[r["space_id"]] else []
             with st.container(border=True):
                 st.markdown(f"**{rank + 1}. {r['name']}** — {lab} at its busiest")
                 st.write(r["reason"] + (f"; {', '.join(extra)}" if extra else "") + ".")
-        db.add_reservation(top["space_id"].iloc[0], start)
-        st.caption(f"A soft reservation was added for {top['name'].iloc[0]}, so the next student "
-                   "sees it as one person fuller. Soft reservations for all users: "
-                   f"{len(db.get_reservations())}.")
+
+        if all_full:
+            st.caption("No soft reservation was added, because every suitable room is expected to be full.")
+        else:
+            db.add_reservation(top["space_id"].iloc[0], start)
+            st.caption(f"A soft reservation was added for {top['name'].iloc[0]}, so the next student "
+                       f"sees it as one person fuller. Soft reservations for all users: "
+                       f"{len(db.get_reservations())}.")
