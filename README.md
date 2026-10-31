@@ -92,7 +92,7 @@ This project uses publicly available datasets for person detection, people count
 | AIRC-SMARTCLASS | [Mendeley Data - Part 3](https://data.mendeley.com/datasets/kk93h9zzbc/1) |
 | ROBOD (Room-level Occupancy and Building Operation Dataset) | [GitHub - ROBOD](https://github.com/ideas-lab-nus/robod) |
 | SDU Occupancy Presence and Trajectory Dataset | [University of Southern Denmark](https://portal.findresearcher.sdu.dk/en/datasets/dataset-occupancy-presence-and-trajectory-data-from-an-instrument/) |
-| Library Seats | [Roboflow - Library Seats] (https://universe.roboflow.com/natnaels-workspace-5sk2c/library-seats)
+| Library Seats | [Roboflow - Library Seats](https://universe.roboflow.com/natnaels-workspace-5sk2c/library-seats)
 
 **Dataset Usage and Attribution**
 
