@@ -2,7 +2,7 @@
 import os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "src", "recommender"))
-os.chdir(ROOT)                                  # so relative paths like data/processed/... work
+os.chdir(ROOT)                                  
 import numpy as np
 import pandas as pd
 import streamlit as st
