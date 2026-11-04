@@ -1,5 +1,5 @@
 
-# "Baka Naman May Bakante"
+# Baka Naman May Bakante
 ### A Smart Study Space Occupancy Analytics and Recommendation System Using YOLO-Based Computer Vision and Predictive Modeling
 
 **Baka Naman May Bakante** is a computer vision-based study space occupancy analytics and recommendation system designed to help students identify suitable study spaces based on predicted occupancy, room capacity, and individual preferences.
@@ -153,15 +153,3 @@ Potential extensions of the project include:
 - Implementation of secure user authentication and actual reservation functionality.
 - Further usability, accessibility, reliability, and security evaluation.
 
----
-
-## Author
-
-**Angela Mari D. Romero**
-
-BS Manufacturing Engineering and Management  
-Specialization in Mechatronics and Robotics  
-De La Salle University – Manila
-
-**Project Type:** Undergraduate Capstone Project  
-**Research Areas:** Computer Vision | Artificial Intelligence | Machine Learning | Predictive Analytics | Process Automation | Smart Campus Systems
